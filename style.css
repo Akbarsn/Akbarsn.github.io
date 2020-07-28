@@ -1,0 +1,223 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Didact+Gothic&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background: #3E3E3D;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 48px;
+  color: #fff;
+}
+
+header {
+  position: sticky;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #F5F5F5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  color: #3E3E3D;
+  font-family: "Didact Gothic", sans-serif;
+  height: 60px;
+  font-size: 36px;
+  line-height: 60px;
+  padding: 0 20px;
+  background: #F5F5F5;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: block;
+  font-family: "Arimo", sans-serif;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #3E3E3D;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background: #3E3E3D;
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 501px) {
+  .menu-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background: #3E3E3D;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
+    color: #F5F5F5;
+  }
+
+  .menu-toggle:before {
+    content: "";
+    font-family: fontAwesome;
+    line-height: 35px;
+  }
+
+  .menu-toggle.active:before {
+    content: "";
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+    width: 100%;
+  }
+
+  nav.active ul {
+    display: block;
+  }
+
+  nav.active ul li a {
+    margin: 0;
+  }
+}
+.jumbotron {
+  padding-top: 20px;
+  background-color: #3E3E3D;
+}
+
+.jumbotron .summary {
+  font-family: "Didact Gothic", sans-serif;
+  margin: auto;
+  position: absolute;
+  background-color: #F5F5F5;
+  width: 40vw;
+  top: 15vw;
+  left: 30vw;
+  padding: 2em;
+  border-radius: 5px;
+}
+
+.projects {
+  margin: 2em 0;
+  margin-right: 4em;
+}
+
+.card .heading {
+  color: #000000;
+  font-size: 32px;
+}
+
+.card {
+  font-family: "Arimo", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 360px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  margin: 1em;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: #F5F5F5;
+  color: black;
+}
+
+.card__face--back {
+  padding: 0.5em;
+  text-align: left;
+  background: #3E3E3D;
+  transform: rotateY(180deg);
+}
+
+card-content {
+  font-family: "Arimo", sans-serif;
+  font-size: 14px;
+}
+
+footer {
+  min-height: 4em;
+  background-color: #F5F5F5;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+footer .heading {
+  color: #000000;
+}
+
+footer .col {
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+}
+
+footer a {
+  font-size: 48px;
+  color: #3E3E3D;
+  text-decoration: none;
+}
+
+footer .contact-detail {
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

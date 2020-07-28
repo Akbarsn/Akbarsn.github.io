@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Didact+Gothic&display=swap')
+    
+$color-primary: #3E3E3D
+$color-secondary: #F5F5F5
+
+$font-primary: 'Didact Gothic', sans-serif
+$font-secondary: 'Arimo', sans-serif
+
+body
+    margin: 0px
+    padding: 0px
+    overflow-x: hidden
+    background: $color-primary
+
+.center
+    display: flex
+    justify-content: center
+    align-items: center  
+
+.heading
+    font-family: $font-primary
+    font-size: 48px
+    color: #fff 
+
+header
+    position: sticky
+    max-width: 1200px
+    margin: 0 auto
+    padding: 10px
+    background: $color-secondary
+    box-sizing: border-box
+    border-radius: 4px
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2)
+
+.logo
+    color: $color-primary
+    font-family: $font-primary
+    height: 60px
+    font-size: 36px
+    line-height: 60px
+    padding: 0 20px
+    background: $color-secondary
+    text-align: center
+    box-sizing: border-box
+    float: left
+    text-decoration: none
+
+nav
+    float: right
+.clearfix
+    clear: both
+nav ul
+    margin: 0
+    padding: 0
+    display: flex
+nav ul li
+    list-style: none
+nav ul li a
+    display: block
+    font-family: $font-secondary
+    margin: 10px 0
+    padding: 10px 20px
+    text-decoration: none
+    color: $color-primary
+nav ul li a.active,
+nav ul li a:hover
+    background: $color-primary
+    color: #fff
+
+@media screen and ( max-width: 1200px)
+    header
+        margin: 20px
+    
+@media screen and ( max-width: 501px)
+    .menu-toggle
+        display: block
+        width: 40px
+        height: 40px
+        margin: 10px
+        background: $color-primary
+        float: right
+        cursor: pointer
+        text-align: center
+        font-size: 25px
+        color: $color-secondary
+    .menu-toggle:before
+        content: '\f0c9'
+        font-family: fontAwesome
+        line-height: 35px
+    .menu-toggle.active:before
+        content: '\f00d'
+    nav
+        display: none
+    nav.active
+        display: block
+        width: 100%
+    nav.active ul
+        display: block
+    nav.active ul li a
+        margin: 0
+.jumbotron    
+    padding-top: 20px
+    background-color: $color-primary
+
+.jumbotron .summary    
+    font-family: $font-primary
+    margin: auto
+    position: absolute
+    background-color: $color-secondary
+    width: 40vw
+    top: 15vw
+    left: 30vw
+    padding: 2em
+    border-radius: 5px
+
+.projects
+    margin: 2em 0
+    margin-right: 4em
+
+.card .heading
+    color: #000000
+    font-size: 32px
+
+.card 
+    font-family: $font-secondary
+    font-size: 20px
+    width: 100%
+    height: 360px
+    transition: transform 1s
+    transform-style: preserve-3d
+    cursor: pointer
+    position: relative
+    margin: 1em
+
+.card.is-flipped 
+    transform: rotateY(180deg)
+
+.card__face 
+    position: absolute
+    width: 100%
+    height: 100%
+    color: white
+    text-align: center
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+
+.card__face--front 
+    background: $color-secondary
+    color: black
+
+.card__face--back
+    padding: 0.5em 
+    text-align: left
+    background: $color-primary
+    transform: rotateY(180deg)
+
+card-content
+    font-family: $font-secondary
+    font-size: 14px
+    
+footer
+    min-height: 4em
+    background-color: $color-secondary
+    border-top-left-radius: 15px
+    border-top-right-radius: 15px
+
+footer .heading
+    color: #000000
+
+footer .col
+    justify-content: center
+    text-align: center
+    align-content: center
+
+footer a 
+    font-size: 48px
+    color: $color-primary
+    text-decoration: none
+
+footer .contact-detail
+    margin: auto
+
+
